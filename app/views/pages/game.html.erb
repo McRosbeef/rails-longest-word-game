@@ -1,0 +1,21 @@
+<h1>Pages#game</h1>
+<p>Find me in app/views/pages/game.html.erb</p>
+
+<br>
+<br>
+<br>
+
+<%= @grid %>
+
+<br>
+<br>
+<br>
+<br>
+
+<form action="/score">
+  <label for="guess">Guess the longest word</label>
+  <input type="text" id="guess" name="guess">
+  <input type="hidden" name="start_time" value="<%= Time.now.to_i %>" >
+  <input type="hidden" name="grid" value="<%= @grid %>" >
+  <input type="submit" value="Go!">
+</form>
